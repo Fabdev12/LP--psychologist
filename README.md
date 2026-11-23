@@ -11,7 +11,6 @@ Projeto inicial de landing page para um psicólogo, desenvolvido com React, Type
 npm install
 npm run dev
 ```
-Abra o endereço exibido pelo Vite (normalmente `http://localhost:5173`).
 
 ## Gerar build
 ```bash
@@ -35,5 +34,3 @@ src/
 └── main.tsx
 ```
 
-## Antes de publicar
-Esta é uma demonstração de portfólio. Substitua o nome fictício, CRP, textos, contatos, endereço e localização do mapa pelos dados autorizados do profissional. Troque as imagens por fotografias licenciadas/autorizadas e configure o destino real do agendamento. As imagens do Unsplash e as fontes do Google Fonts dependem de conexão com a internet. Os textos são demonstrativos e não substituem informações profissionais reais.
