@@ -1,2 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
-:root{font-family:"DM Sans",sans-serif;color:#303a3d;background:#f6f7f5;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;--blue:#78aebe;--blue-deep:#5c98aa;--blue-pale:#eaf1f1}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px}a{color:inherit;text-decoration:none}::selection{background:#c5e0e4;color:#243538}.font-display{font-family:"Playfair Display",Georgia,serif}.section-shell{width:min(1120px,calc(100% - 48px));margin-inline:auto}.eyebrow{color:var(--blue-deep);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}@media(max-width:640px){.section-shell{width:min(100% - 36px,1120px)}}
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #303a3d;
+  background: #f6f7f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --blue: #78aebe;
+  --blue-deep: #5c98aa;
+  --blue-pale: #eaf1f1;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+::selection {
+  background: #c5e0e4;
+  color: #243538;
+}
+.font-display {
+  font-family: "Lora", Georgia, serif;
+}
+.section-shell {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+}
+.eyebrow {
+  color: var(--blue-deep);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+@media (max-width: 640px) {
+  .section-shell {
+    width: min(100% - 36px, 1120px);
+  }
+}

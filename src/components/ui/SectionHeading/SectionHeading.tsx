@@ -1,2 +1,16 @@
-type Props={eyebrow:string;title:string;description?:string};
-export function SectionHeading({eyebrow,title,description}:Props){return <div className="mx-auto max-w-[650px] text-center"><p className="eyebrow mb-4">{eyebrow}</p><h2 className="font-display text-3xl leading-[1.2] tracking-[-.035em] sm:text-4xl md:text-[46px]">{title}</h2>{description&&<p className="mx-auto mt-4 max-w-[540px] text-sm leading-7 text-[#718084]">{description}</p>}</div>}
+type Props = { eyebrow: string; title: string; description?: string };
+export function SectionHeading({ eyebrow, title, description }: Props) {
+  return (
+    <div className="mx-auto max-w-[650px] text-center">
+      <p className="eyebrow mb-4">{eyebrow}</p>
+      <h2 className="font-display text-3xl leading-[1.2] tracking-[-.035em] sm:text-4xl md:text-[46px]">
+        {title}
+      </h2>
+      {description && (
+        <p className="mx-auto mt-4 max-w-[540px] text-sm leading-7 text-[#718084]">
+          {description}
+        </p>
+      )}
+    </div>
+  );
+}

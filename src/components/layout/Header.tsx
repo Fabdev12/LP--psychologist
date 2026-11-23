@@ -1,6 +1,66 @@
-import {useState} from 'react';
-import {Menu,X} from 'lucide-react';
-import {Container} from '../ui/Container/Container';
-import {Button} from '../ui/Button/Button';
-const links=[['Início','#inicio'],['A terapia','#terapia'],['Sobre mim','#sobre'],['Localização','#localizacao']];
-export function Header(){const[open,setOpen]=useState(false);return <header className="absolute inset-x-0 top-0 z-50"><Container className="flex h-[82px] items-center justify-between"><a href="#inicio" className="font-display text-[23px] tracking-[-.06em] text-[#344246]">LUCAS<span className="text-[#78aebe">.</span><span className="ml-2 font-sans text-[8px] font-semibold uppercase tracking-[.18em] text-[#819093]">Psicólogo</span></a><nav className="hidden items-center gap-7 md:flex">{links.map(([label,href])=><a key={href} href={href} className="text-[9px] font-bold uppercase tracking-[.12em] text-[#58676b] hover:text-[#5c98aa]">{label}</a>)}<Button href="#contato">Agendar conversa</Button></nav><button onClick={()=>setOpen(!open)} className="rounded-full border border-[#dce6e6] p-2 text-[#344246] md:hidden" aria-label="Abrir menu">{open?<X size={19}/>:<Menu size={19}/>}</button></Container>{open&&<div className="mx-4 rounded-2xl border border-[#e1e9e8] bg-[#fbfcfa] p-5 shadow-xl md:hidden"><nav className="flex flex-col gap-4">{links.map(([label,href])=><a key={href} onClick={()=>setOpen(false)} href={href} className="text-xs font-bold uppercase tracking-widest text-[#58676b]">{label}</a>)}<Button href="#contato" onClick={()=>setOpen(false)}>Agendar conversa</Button></nav></div>}</header>}
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { Container } from "../ui/Container/Container";
+import { Button } from "../ui/Button/Button";
+const links = [
+  ["Início", "#inicio"],
+  ["A terapia", "#terapia"],
+  ["Sobre mim", "#sobre"],
+  ["Localização", "#localizacao"],
+];
+export function Header() {
+  const [open, setOpen] = useState(false);
+  return (
+    <header className="absolute inset-x-0 top-0 z-50">
+      <Container className="flex h-[82px] items-center justify-between">
+        <a
+          href="#inicio"
+          className="font-display text-[23px] tracking-[-.06em] text-[#344246]"
+        >
+          LUCAS<span className="text-[#78aebe">.</span>
+          <span className="ml-2 font-sans text-[8px] font-semibold uppercase tracking-[.18em] text-[#819093]">
+            Psicólogo
+          </span>
+        </a>
+        <nav className="hidden items-center gap-7 md:flex">
+          {links.map(([label, href]) => (
+            <a
+              key={href}
+              href={href}
+              className="text-[9px] font-bold uppercase tracking-[.12em] text-[#58676b] hover:text-[#5c98aa]"
+            >
+              {label}
+            </a>
+          ))}
+          <Button href="#contato">Agendar conversa</Button>
+        </nav>
+        <button
+          onClick={() => setOpen(!open)}
+          className="rounded-full border border-[#dce6e6] p-2 text-[#344246] md:hidden"
+          aria-label="Abrir menu"
+        >
+          {open ? <X size={19} /> : <Menu size={19} />}
+        </button>
+      </Container>
+      {open && (
+        <div className="mx-4 rounded-2xl border border-[#e1e9e8] bg-[#fbfcfa] p-5 shadow-xl md:hidden">
+          <nav className="flex flex-col gap-4">
+            {links.map(([label, href]) => (
+              <a
+                key={href}
+                onClick={() => setOpen(false)}
+                href={href}
+                className="text-xs font-bold uppercase tracking-widest text-[#58676b]"
+              >
+                {label}
+              </a>
+            ))}
+            <Button href="#contato" onClick={() => setOpen(false)}>
+              Agendar conversa
+            </Button>
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}

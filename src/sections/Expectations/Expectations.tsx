@@ -1,5 +1,55 @@
-import {motion} from 'motion/react';
-import {Container} from '../../components/ui/Container/Container';
-import {SectionHeading} from '../../components/ui/SectionHeading/SectionHeading';
-const steps=[{number:'01',title:'Conecte-se',text:'Um primeiro espaço para conversar, apresentar suas questões e entender como posso acompanhar você.'},{number:'02',title:'Comece seu caminho',text:'No seu ritmo, vamos construir um processo terapêutico alinhado às suas necessidades e objetivos.'},{number:'03',title:'Reconheça possibilidades',text:'Com acolhimento e reflexão, você poderá ampliar a compreensão sobre si e suas experiências.'}];
-export function Expectations(){return <section className="bg-[#fbfcfa] py-20 sm:py-24"><Container><SectionHeading eyebrow="O que esperar" title="Um espaço para ser ouvido, compreendido e acolhido." description="A terapia é um processo construído em conjunto. Cada história é única, e o caminho respeita o seu tempo."/><div className="mt-16 grid gap-5 md:grid-cols-3">{steps.map((step,index)=><motion.article key={step.number} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true,amount:.3}} transition={{delay:index*.12,duration:.5}} className="relative rounded-[30px] bg-[#eaf1f1] px-7 pb-9 pt-12 text-center"><span className="absolute -top-5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full bg-[#6fa5b5] font-display text-lg text-white">{step.number}</span><h3 className="font-display text-[23px] text-[#557b85]">{step.title}</h3><p className="mx-auto mt-4 max-w-[270px] text-xs leading-6 text-[#78898c]">{step.text}</p></motion.article>)}</div></Container></section>}
+import { motion } from "motion/react";
+import { Container } from "../../components/ui/Container/Container";
+import { SectionHeading } from "../../components/ui/SectionHeading/SectionHeading";
+const steps = [
+  {
+    number: "01",
+    title: "Conecte-se",
+    text: "Um primeiro espaço para conversar, apresentar suas questões e entender como posso acompanhar você.",
+  },
+  {
+    number: "02",
+    title: "Comece seu caminho",
+    text: "No seu ritmo, vamos construir um processo terapêutico alinhado às suas necessidades e objetivos.",
+  },
+  {
+    number: "03",
+    title: "Reconheça possibilidades",
+    text: "Com acolhimento e reflexão, você poderá ampliar a compreensão sobre si e suas experiências.",
+  },
+];
+export function Expectations() {
+  return (
+    <section className="bg-[#fbfcfa] py-20 sm:py-24">
+      <Container>
+        <SectionHeading
+          eyebrow="O que esperar"
+          title="Um espaço para ser ouvido, compreendido e acolhido."
+          description="A terapia é um processo construído em conjunto. Cada história é única, e o caminho respeita o seu tempo."
+        />
+        <div className="mt-16 grid gap-5 md:grid-cols-3">
+          {steps.map((step, index) => (
+            <motion.article
+              key={step.number}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: index * 0.12, duration: 0.5 }}
+              className="relative rounded-[30px] bg-[#eaf1f1] px-7 pb-9 pt-12 text-center"
+            >
+              <span className="absolute -top-5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full bg-[#6fa5b5] font-display text-lg text-white">
+                {step.number}
+              </span>
+              <h3 className="font-display text-[23px] text-[#557b85]">
+                {step.title}
+              </h3>
+              <p className="mx-auto mt-4 max-w-[270px] text-xs leading-6 text-[#78898c]">
+                {step.text}
+              </p>
+            </motion.article>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}

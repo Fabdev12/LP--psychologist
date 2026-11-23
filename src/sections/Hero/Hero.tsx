@@ -1,5 +1,65 @@
-import {motion} from 'motion/react';
-import {ArrowDown,ArrowUpRight} from 'lucide-react';
-import {Container} from '../../components/ui/Container/Container';
-import {Button} from '../../components/ui/Button/Button';
-export function Hero(){return <section id="inicio" className="relative overflow-hidden bg-[#f0f3f1] pb-16 pt-28 sm:pt-32"><div className="absolute -right-24 top-10 h-72 w-72 rounded-full bg-[#dce9e9]/70 blur-3xl"/><Container className="relative grid items-center gap-10 md:grid-cols-[.92fr_1.08fr] md:gap-14"><motion.div initial={{opacity:0,y:22}} animate={{opacity:1,y:0}} transition={{duration:.7}}><p className="eyebrow mb-5">Psicologia · Atendimento presencial e online</p><h1 className="font-display max-w-[540px] text-[43px] leading-[1.12] tracking-[-.045em] text-[#354347] sm:text-5xl lg:text-[62px]">Um caminho de cuidado para <em className="text-[#6c9eac]">você</em>.</h1><p className="mt-6 max-w-[430px] text-sm leading-7 text-[#748184] sm:text-[15px]">Um espaço de escuta e acolhimento para compreender suas emoções, respeitar sua história e construir novas possibilidades.</p><div className="mt-8 flex flex-wrap items-center gap-4"><Button href="#contato">Agende seu atendimento <ArrowUpRight size={14} className="ml-2"/></Button><a href="#terapia" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.12em] text-[#657579]">Conheça a proposta <ArrowDown size={13}/></a></div><p className="mt-9 text-[10px] tracking-[.08em] text-[#98a3a4]">Atendimento com respeito, ética e individualidade.</p></motion.div><motion.div initial={{opacity:0,scale:.97}} animate={{opacity:1,scale:1}} transition={{duration:.8,delay:.12}} className="relative mx-auto w-full max-w-[570px]"><div className="absolute -left-5 bottom-8 top-8 w-1/3 rounded-[100px] bg-[#d7e5e5]"/><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=85" alt="Retrato profissional masculino em ambiente neutro" className="relative h-[340px] w-full rounded-[150px] object-cover object-center shadow-[0_22px_60px_rgba(57,88,95,.14)] sm:h-[430px] md:rounded-[180px]"/><div className="absolute -bottom-5 right-5 rounded-2xl bg-white/95 px-5 py-4 shadow-lg"><p className="font-display text-lg text-[#45575b]">Lucas Almeida</p><p className="mt-1 text-[9px] uppercase tracking-[.16em] text-[#829194]">Psicólogo · CRP 00/00000</p></div></motion.div></Container></section>}
+import { motion } from "motion/react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { Container } from "../../components/ui/Container/Container";
+import { Button } from "../../components/ui/Button/Button";
+export function Hero() {
+  return (
+    <section
+      id="inicio"
+      className="relative overflow-hidden bg-[#f0f3f1] pb-16 pt-28 sm:pt-32"
+    >
+      <div className="absolute -right-24 top-10 h-72 w-72 rounded-full bg-[#dce9e9]/70 blur-3xl" />
+      <Container className="relative grid items-center gap-10 md:grid-cols-[.92fr_1.08fr] md:gap-14">
+        <motion.div
+          initial={{ opacity: 0, y: 22 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+        >
+          <p className="eyebrow mb-5">
+            Psicologia · Atendimento presencial e online
+          </p>
+          <h1 className="font-display  max-w-[540px] text-[43px] leading-[1.12] tracking-[-.045em] text-[#354347] sm:text-5xl lg:text-[62px]">
+            Um caminho de cuidado para <em className="text-[#6c9eac] font-extrabold">você</em>.
+          </h1>
+          <p className="mt-6 max-w-[430px] text-sm leading-7 text-[#748184] sm:text-[15px]">
+            Um espaço de escuta e acolhimento para compreender suas emoções,
+            respeitar sua história e construir novas possibilidades.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Button href="#contato">
+              Agende seu atendimento <ArrowUpRight size={14} className="ml-2" />
+            </Button>
+            <a
+              href="#terapia"
+              className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.12em] text-[#657579]"
+            >
+              Conheça a proposta <ArrowDown size={13} />
+            </a>
+          </div>
+          <p className="mt-9 text-[10px] tracking-[.08em] text-[#98a3a4]">
+            Atendimento com respeito, ética e individualidade.
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.12 }}
+          className="relative mx-auto w-full max-w-[570px]"
+        >
+          <div className="absolute -left-5 bottom-8 top-8 w-1/3 rounded-[100px] bg-[#d7e5e5]" />
+          <img
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=85"
+            alt="Retrato profissional masculino em ambiente neutro"
+            className="relative h-[340px] w-full rounded-[150px] object-cover object-[center_10%]  shadow-[0_22px_60px_rgba(57,88,95,.14)] sm:h-[430px] md:rounded-[180px]"
+          />
+          <div className="absolute -bottom-5 right-5 rounded-2xl bg-white/95 px-5 py-4 shadow-lg">
+            <p className="font-display text-lg text-[#45575b]">Lucas Almeida</p>
+            <p className="mt-1 text-[9px] uppercase tracking-[.16em] text-[#829194]">
+              Psicólogo · CRP 00/00000
+            </p>
+          </div>
+        </motion.div>
+      </Container>
+    </section>
+  );
+}

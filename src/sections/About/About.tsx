@@ -23,7 +23,7 @@ export function About() {
           </div>
           <a
             href="#contato"
-            className="mt-8 inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[.15em] text-[#5c98aa]"
+            className="mt-8 inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[.15em] text-[#5c98aa] bg-red-500"
           >
             Vamos conversar ↗
           </a>
